@@ -5,20 +5,6 @@ const { JWT_SECRET } = process.env;
 const express = require("express");
 const apiRouter = express.Router();
 
-// apiRouter.use(async (req, res, next) => {
-//   const user = await getUserByUsername(req.body.username);
-//   const token = jwt.sign(
-//     {
-//       username: user.username,
-//       password: user.password,
-//     },
-//     JWT_SECRET,
-//     {
-//       expiresIn: "1w",
-//     }
-//   );
-//   next();
-// });
 apiRouter.use(async (req, res, next) => {
   const prefix = "Bearer ";
   const auth = req.header("Authorization");
