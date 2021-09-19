@@ -6,8 +6,6 @@ const morgan = require("morgan");
 const { client } = require("./db");
 const jwt = require("jsonwebtoken");
 
-console.log("our ServerKey is: " + process.env.JWT_SECRET);
-
 client.connect();
 const server = express();
 server.use(morgan("dev"));
