@@ -3,15 +3,15 @@ const { Client } = require("pg"); // imports the pg module
 /**
  * USER Methods
  */
-const client = new Client(
-  process.env.DATABASE_URL || "postgres://localhost:5432/juicebox-dev"
-);
+// const client = new Client(
+//   process.env.DATABASE_URL || "postgres://localhost:5432/juicebox-dev"
+// );
 
-// const client = new Client({
-//   user: "postgres",
-//   database: "juicebox_dev",
-//   password: "huiAS^$DGN6FA6y77NITVac",
-// });
+const client = new Client({
+  user: "postgres",
+  database: "juicebox_dev",
+  password: "huiAS^$DGN6FA6y77NITVac",
+});
 /**
  * USER Methods
  */
